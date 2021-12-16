@@ -34,7 +34,7 @@ jobs:
         run: |
           chmod +x ./shiftleft
           git clone https://github.com/Senas23/demo-app
-          ./shiftleft code-scan -sevt 4 -s ./demo-app -e $CHKP_CLOUDGUARD_ENV
+          ./shiftleft code-scan -sevt 4 -s ./demo-app -r -2003 -e $CHKP_CLOUDGUARD_ENV
   build-image:
     runs-on: ubuntu-latest
     steps:
@@ -49,7 +49,7 @@ jobs:
           docker build -t senas23/myapp ./demo-app
           docker save -o myapp.tar senas23/myapp
           chmod +x ./shiftleft
-          ./shiftleft image-scan -i myapp.tar -e $CHKP_CLOUDGUARD_ENV
+          ./shiftleft image-scan -i myapp.tar -r -2002 -e $CHKP_CLOUDGUARD_ENV
   verify-infra:
     runs-on: ubuntu-latest
     steps:
