@@ -30,7 +30,7 @@ jobs:
         env: 
           CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
           CHKP_CLOUDGUARD_SECRET: ${{ secrets.CHKP_CLOUDGUARD_SECRET }}
-          CHKP_CLOUDGUARD_ENV: ${{ sectrets.CHKP_CLOUDGUARD_ENV }}
+          CHKP_CLOUDGUARD_ENV: ${{ secrets.CHKP_CLOUDGUARD_ENV }}
         run: |
           chmod +x ./shiftleft
           git clone https://github.com/Senas23/demo-app
@@ -43,7 +43,7 @@ jobs:
         env: 
           CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
           CHKP_CLOUDGUARD_SECRET: ${{ secrets.CHKP_CLOUDGUARD_SECRET }}
-          CHKP_CLOUDGUARD_ENV: ${{ sectrets.CHKP_CLOUDGUARD_ENV }}
+          CHKP_CLOUDGUARD_ENV: ${{ secrets.CHKP_CLOUDGUARD_ENV }}
         run: |
           git clone https://github.com/Senas23/demo-app
           docker build -t senas23/myapp ./demo-app
@@ -58,7 +58,7 @@ jobs:
         env:
           CHKP_CLOUDGUARD_ID: ${{ secrets.CHKP_CLOUDGUARD_ID }}
           CHKP_CLOUDGUARD_SECRET: ${{secrets.CHKP_CLOUDGUARD_SECRET }}
-          CHKP_CLOUDGUARD_ENV: ${{ sectrets.CHKP_CLOUDGUARD_ENV }}
+          CHKP_CLOUDGUARD_ENV: ${{ secrets.CHKP_CLOUDGUARD_ENV }}
         run: |
           git clone https://github.com/Senas23/demo-app
           chmod +x ./shiftleft
